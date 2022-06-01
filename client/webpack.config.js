@@ -25,6 +25,7 @@ module.exports = () => {
       new GenerateSW(),
       // Creates a manifest.json file for making the app installable.
       new WebpackPwaManifest({
+        fingerprints: false,
         inject: true,
         name: "Just another text editor ",
         short_name: "jate",
