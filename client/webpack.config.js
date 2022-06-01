@@ -25,14 +25,15 @@ module.exports = () => {
       new GenerateSW(),
       // Creates a manifest.json file for making the app installable.
       new WebpackPwaManifest({
+        fingerprints: false,
         inject: true,
         name: "Just another text editor ",
         short_name: "jate",
         description: "A text editor",
         background_color: "#225ca3",
         theme_color: "#225ca3",
-        start_url: "./",
-        publicPath: "./",
+        start_url: "/",
+        publicPath: "/",
         icons: [
           {
             src: path.resolve("src/images/logo.png"),
